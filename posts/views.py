@@ -75,3 +75,9 @@ def detail(request, postId, slug):
         'post':post
     }
     return render(request, 'detail.html', context)
+
+def hata(request):
+    return render(request, 'hata.html')
+
+def view_404(request, exception):
+    return redirect('hata')
